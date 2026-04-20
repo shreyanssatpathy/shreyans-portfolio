@@ -2,6 +2,7 @@ import Nav from "./components/Nav";
 import HeroCanvas from "./components/HeroCanvas";
 import RevealObserver from "./components/RevealObserver";
 import Ticker from "./components/Ticker";
+import BlogCarousel from "./components/BlogCarousel";
 
 export default function Home() {
   return (
@@ -339,35 +340,7 @@ export default function Home() {
       <section id="blog">
         <div className="section-label">04 — Writing</div>
         <h2 className="section-title reveal">Thinking Out Loud</h2>
-        <div className="blog-grid">
-          {[
-            "https://www.linkedin.com/embed/feed/update/urn:li:share:7414035193327489024?collapsed=1",
-            "https://www.linkedin.com/embed/feed/update/urn:li:share:7402109010587324416?collapsed=1",
-            "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7376895590602969088?collapsed=1",
-          ].map((src, i) => (
-            <div
-              key={src}
-              className={`blog-card reveal${
-                i === 1 ? " reveal-delay-1" : i === 2 ? " reveal-delay-2" : ""
-              }`}
-            >
-              <div className="blog-card-header">
-                <span className="blog-card-dot" />
-                <span className="blog-card-label">
-                  LinkedIn · Shreyans Satpathy
-                </span>
-              </div>
-              <div className="blog-card-body">
-                <iframe
-                  src={src}
-                  allowFullScreen
-                  scrolling="no"
-                  title="Embedded LinkedIn post"
-                />
-              </div>
-            </div>
-          ))}
-        </div>
+        <BlogCarousel />
       </section>
 
       {/* RESUME */}

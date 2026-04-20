@@ -14,7 +14,10 @@ export default function Nav() {
 
   return (
     <nav id="main-nav" className={scrolled ? "scrolled" : ""}>
-      <div className="nav-logo">SS — Portfolio</div>
+      <div className="nav-logo">
+        <span className="nav-logo-full">SS — Portfolio</span>
+        <span className="nav-logo-short">SS</span>
+      </div>
       <div className="nav-links">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
